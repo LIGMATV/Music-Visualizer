@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.7">
+  <title>Audio Visualizer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <canvas id="visualizer" width="640" height="360"></canvas>
+    <input type="file" id="fileInput" accept="audio/*" onchange="loadAudio()">
+    <div class="color-picker-container">
+      <label for="colorPicker">Choose Color:</label>
+      <input type="color" id="colorPicker" value="#ff0000" onchange="changeColor()">
+    </div>
+    <audio id="audio" controls>
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .color-picker-container {
+    margin-top: 10px;
+  } 
+
+  .small-image {
+            position: absolute;
+            top: 10px; /* Jarak dari atas */
+            right: 10px; /* Jarak dari kanan */
+            width: 30px; /* Lebar gambar */
+            height: auto; /* Tinggi gambar menyesuaikan proporsi */
+            border-radius: 50%; /* Bentuk melengkung gambar */
+        }
+
+  #fileInput {
+  margin-top: 10px;
+  display: block; /* agar input file berada pada baris baru */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+</style>
+<a class="image-link" href="https://youtube.com/@L1GM4TV" target="_blank">
+  <img class="small-image" src="l.jpg" alt="Small Image">
+</a>
+  <script src="script.js"></script>
+</body>
+</html>
